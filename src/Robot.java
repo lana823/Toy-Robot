@@ -111,28 +111,28 @@ public class Robot {
 		switch (this.facing) {
 		
 		case NORTH:
-			while (this.y < Border.NORTH_BORDER) {
+			while (this.y < Settings.NORTH_BORDER) {
 				this.y = this.y + 1;
 			}
 			
 			break;
 			
 		case WEST:
-			while (this.x > Border.WEST_BORDER) {
+			while (this.x > Settings.WEST_BORDER) {
 				this.x = this.x - 1;
 			}
 			
 			break;
 		
 		case SOUTH:
-			while (this.y > Border.SOUTH_BORDER) {
+			while (this.y > Settings.SOUTH_BORDER) {
 				this.y = this.y - 1;
 			}
 			
 			break;
 		
 		case EAST:
-			while (this.x < Border.EAST_BORDER) {
+			while (this.x < Settings.EAST_BORDER) {
 				this.x = this.x + 1;
 			}
 			
