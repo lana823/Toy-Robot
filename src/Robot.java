@@ -13,7 +13,7 @@ public class Robot {
 	private FACING facing;
 	
 	
-	public void place (int x, int y, String facing ) {
+	public void PLACE (int x, int y, String facing ) {
 
 		this.x = x;
 
@@ -22,19 +22,19 @@ public class Robot {
 		switch (Robot.FACING.valueOf(facing.toUpperCase())) {
 
 		case NORTH :
-			this.facing = FACING.EAST;
+			this.facing = FACING.NORTH;
 			break;
 		
 		case SOUTH :
-			this.facing = FACING.WEST;
-			break;
-			
-		case EAST :
 			this.facing = FACING.SOUTH;
 			break;
 			
+		case EAST :
+			this.facing = FACING.EAST;
+			break;
+			
 		case WEST :
-			this.facing = FACING.NORTH;
+			this.facing = FACING.WEST;
 			break;
 			
 		default :
@@ -42,7 +42,35 @@ public class Robot {
 			break;
 
 		}
+		
+		
 
+	}
+	
+	//turn right
+	public void RIGHT () {
+		switch (this.facing) {
+		
+		case NORTH:
+			this.facing = FACING.EAST;
+			break;
+			
+		case EAST:
+			this.facing = FACING.SOUTH;
+			break;
+		
+		case SOUTH:
+			this.facing = FACING.WEST;
+			break;
+		
+		case WEST:
+			this.facing = FACING.NORTH;
+			break;
+			
+		default :
+			break;
+			
+		}
 	}
 
 
