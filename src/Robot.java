@@ -113,6 +113,7 @@ public class Robot {
 		case NORTH:
 			while (this.y < Settings.NORTH_BORDER) {
 				this.y = this.y + 1;
+				break;
 			}
 			
 			break;
@@ -120,6 +121,7 @@ public class Robot {
 		case WEST:
 			while (this.x > Settings.WEST_BORDER) {
 				this.x = this.x - 1;
+				break;
 			}
 			
 			break;
@@ -127,6 +129,7 @@ public class Robot {
 		case SOUTH:
 			while (this.y > Settings.SOUTH_BORDER) {
 				this.y = this.y - 1;
+				break;
 			}
 			
 			break;
@@ -134,6 +137,7 @@ public class Robot {
 		case EAST:
 			while (this.x < Settings.EAST_BORDER) {
 				this.x = this.x + 1;
+				break;
 			}
 			
 			break;
