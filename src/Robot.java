@@ -106,6 +106,43 @@ public class Robot {
 		System.out.println(status);
 
 		}
+	
+	public void MOVE () {
+		switch (this.facing) {
+		
+		case NORTH:
+			while (this.y < Border.NORTH_BORDER) {
+				this.y = this.y + 1;
+			}
+			
+			break;
+			
+		case WEST:
+			while (this.x > Border.WEST_BORDER) {
+				this.x = this.x - 1;
+			}
+			
+			break;
+		
+		case SOUTH:
+			while (this.y > Border.SOUTH_BORDER) {
+				this.y = this.y - 1;
+			}
+			
+			break;
+		
+		case EAST:
+			while (this.x < Border.EAST_BORDER) {
+				this.x = this.x + 1;
+			}
+			
+			break;
+			
+		default :
+			break;
+			
+		}
+	}
 
 
 
