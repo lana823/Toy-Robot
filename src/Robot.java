@@ -97,6 +97,15 @@ public class Robot {
 			
 		}
 	}
+	
+	//add report function
+	public void REPORT () {
+
+		String status = Integer.toString(this.x) + "," + Integer.toString(this.y) + "," + this.facing.toString();
+
+		System.out.println(status);
+
+		}
 
 
 
