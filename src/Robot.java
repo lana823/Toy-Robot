@@ -72,6 +72,31 @@ public class Robot {
 			
 		}
 	}
+	
+	public void LEFT () {
+		switch (this.facing) {
+		
+		case NORTH:
+			this.facing = FACING.WEST;
+			break;
+			
+		case WEST:
+			this.facing = FACING.SOUTH;
+			break;
+		
+		case SOUTH:
+			this.facing = FACING.EAST;
+			break;
+		
+		case EAST:
+			this.facing = FACING.NORTH;
+			break;
+			
+		default :
+			break;
+			
+		}
+	}
 
 
 
