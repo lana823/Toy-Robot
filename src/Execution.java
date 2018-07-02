@@ -38,7 +38,7 @@ public class Execution {
 	
 	public static void execution(ArrayList<ArrayList<String>> itemsInLine) {
 		Robot robot = new Robot();
-		
+		boolean isPlaced = false;
 		try {
 			for (int i = 0; i< itemsInLine.size(); i++) {
 				ArrayList<String> items = itemsInLine.get(i);
@@ -46,30 +46,50 @@ public class Execution {
 				switch (items.get(0).toUpperCase()) {
 				
 				case "PLACE" :
+					isPlaced = true;
 					robot.PLACE(Integer.parseInt(items.get(1)), Integer.parseInt(items.get(2)), items.get(3));
 					break;
 					
 				case "MOVE" :
-					robot.MOVE();
+					if (isPlaced) {
+						robot.MOVE();
+					}
+					
 					break;
 				
 				case "LEFT" :
-					robot.LEFT();
+					if (isPlaced) {
+						robot.LEFT();
+					}
+					
 					break;
 					
 				case "RIGHT" :
-					robot.RIGHT();
+					if (isPlaced) {
+						robot.RIGHT();
+					}
+					
 					break;
 					
 				case "REPORT" :
-					robot.REPORT();
+					if (isPlaced) {
+						robot.REPORT();
+					}
+					
 					break;
 					
 				default:
-					System.out.println("Please enter right command");
+					if (isPlaced) {
+						System.out.println("Please enter right command");
+					}
+					
 					break;
 				}
 					
+			}
+			
+			if(!isPlaced) {
+				System.out.println("Please place toy robot first");
 			}
 			
 		} catch (java.lang.NullPointerException e) {
